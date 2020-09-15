@@ -26,3 +26,14 @@ From soft skills, I can single out the ability to learn quickly, self-organizati
 **5. Code examples:**
 * Landing Page "Skinali" - https://github.com/bezrukviktor/skinali
 * Landing Page "Luxestate" - https://github.com/bezrukviktor/Luxestate
+
+**6. Education:**
+* 2012 – 2018. The V. N. Karazin Kharkiv National University – Master Degree, Earth sciences, Economic and social geography.
+
+**7. Additional Education:**
+* Currently - JS/FE 2020 Q3 - RS School;
+* 2018 - Front-End Pro – Hillel IT School;
+* 2018 - Web-developer 11.0 – Glo-Academy.
+
+**8. Languages:**
+* English - Pre-Intermediate
