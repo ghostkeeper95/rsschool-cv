@@ -37,3 +37,8 @@ From soft skills, I can single out the ability to learn quickly, self-organizati
 
 **8. Languages:**
 * English - Pre-Intermediate
+
+**9. My work example**
+* Landing - https://bezrukviktor.github.io/skinali/
+* Landing - https://bezrukviktor.github.io/Luxestate/
+* My own project – t.me/movie_tape_bot
