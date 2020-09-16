@@ -116,15 +116,16 @@
 
 .row 
   display: flex
+  align-items: start
   margin-bottom: 50px
   .left-block
     flex-basis: 50%
     margin-right: 100px
   .right-block
-    flex-basis: 40%
+    flex-basis: 50%
   .about
     &-text
-      font-size: 15px
+      font-size: 18px
       line-height: 2
       margin-bottom: 20px
       +light
@@ -154,7 +155,7 @@
     &-title
       flex-basis: 100%
     &-block
-      margin-bottom: 40px
+      margin-bottom: 20px
     &-main
       flex-basis: 100%
     &-subtitle
@@ -162,7 +163,7 @@
       margin-bottom: 15px
       font-size: 20px
       +medium
-    .skill
+    &-info
       display: block
       position: relative
       font-size: 16px
@@ -196,6 +197,15 @@
     .git
       width: 52%
       background-color: #666666
+    .ukr
+      width: 87%
+      background-color: #FFD500
+    .eng
+      width: 34%
+      background-color: #B2231F
+    .rus
+      width: 79%
+      background-color: #0033A0
     &__html
       &::before
         background: url(../img/skills/html5.svg) no-repeat center
@@ -268,6 +278,8 @@
         background-size: 15px 15px
         width: 15px
         height: 15px
+    &__lang
+      margin-left: 0
 
 
 

@@ -151,6 +151,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   margin-bottom: 50px;
 }
 
@@ -161,12 +164,12 @@
 }
 
 .row .right-block {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 .row .about-text {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 2;
   margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
@@ -219,7 +222,7 @@
 }
 
 .row .skills-block {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .row .skills-main {
@@ -235,7 +238,7 @@
   font-weight: 500;
 }
 
-.row .skills .skill {
+.row .skills-info {
   display: block;
   position: relative;
   font-size: 16px;
@@ -245,7 +248,7 @@
   font-weight: 300;
 }
 
-.row .skills .skill::before {
+.row .skills-info::before {
   content: "";
   position: absolute;
   left: -20px;
@@ -285,6 +288,21 @@
 .row .skills .git {
   width: 52%;
   background-color: #666666;
+}
+
+.row .skills .ukr {
+  width: 87%;
+  background-color: #FFD500;
+}
+
+.row .skills .eng {
+  width: 34%;
+  background-color: #B2231F;
+}
+
+.row .skills .rus {
+  width: 79%;
+  background-color: #0033A0;
 }
 
 .row .skills__html::before {
@@ -369,5 +387,9 @@
   background-size: 15px 15px;
   width: 15px;
   height: 15px;
+}
+
+.row .skills__lang {
+  margin-left: 0;
 }
 /*# sourceMappingURL=style.css.map */
