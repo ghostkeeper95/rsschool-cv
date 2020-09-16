@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap')
+
+@mixin light
+  font-family: 'Poppins', sans-serif
+  font-weight: 300
+
+@mixin medium
+  font-family: 'Poppins', sans-serif
+  font-weight: 500
+
+@mixin bold
+  font-family: 'Poppins', sans-serif
+  font-weight: 700
+  
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+.container
+  max-width: 1170px
+  margin: 0 auto
+
+//=========header-styles=========
+
+.header
+  background: url(../img/background.jpg) no-repeat center top -80px
+  background-size: cover
+  padding: 200px 0
+  .intro
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-text
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      &__name
+        font-size: 72px
+        color: #ffffff
+        +bold
+      &__position
+        font-size: 40px
+        color: #ffffff
+        +medium
+    &-img
+      img
+        max-width: 350px
+        border-radius: 50%
+        box-shadow: 0px 0px 165px -6px rgba(255,255,255,1)
+    &-contacts
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-around
+      margin-top: 50px
+      margin-left: 50px
+      padding-left: 0
+      li
+        list-style-type: none
+        flex-basis: 50%
+        margin-bottom: 30px
+        a
+          text-decoration: none
+          color: #3C99DC
+          font-size: 18px
+          +light
+
+.intro-link
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    left: -50px
+    top: 50%
+    transform: translateY(-50%)
+
+.telegram
+  &::before
+    background: url(../img/telegram.svg) no-repeat center
+    background-size: 35px 35px
+    width: 35px
+    height: 35px
+
+.phone
+  &::before
+    background: url(../img/phone.svg) no-repeat center
+    background-size: 35px 35px
+    width: 35px
+    height: 35px
+
+.email
+  &::before
+    background: url(../img/gmail.svg) no-repeat center
+    background-size: 35px 35px
+    width: 35px
+    height: 35px
+
+.linkedin
+  &::before
+    background: url(../img/linkedin.svg) no-repeat center
+    background-size: 35px 35px
+    width: 35px
+    height: 35px
+
+//===========section==============
+
+.section
+  padding: 70px 0
+
+.title
+  font-size: 35px
+  margin-bottom: 40px
+  text-transform: uppercase
+  +medium
+
+.row 
+  display: flex
+  align-items: start
+  margin-bottom: 50px
+  .left-block
+    flex-basis: 50%
+    margin-right: 100px
+  .right-block
+    flex-basis: 50%
+  .about
+    &-text
+      font-size: 18px
+      line-height: 2
+      margin-bottom: 20px
+      +light
+  .education
+    &-block
+      margin-bottom: 30px
+      padding-bottom: 10px
+      border-bottom: 1px solid #666666
+    &__university
+      display: block
+      margin-bottom: 15px
+      font-size: 20px
+      +medium
+    &__years
+      display: block
+      margin-bottom: 15px
+      font-size: 18px
+      +medium
+    &__text
+      display: block
+      font-size: 14px
+      +light
+  .skills
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &-title
+      flex-basis: 100%
+    &-block
+      margin-bottom: 20px
+    &-main
+      flex-basis: 100%
+    &-subtitle
+      display: block
+      margin-bottom: 15px
+      font-size: 20px
+      +medium
+    &-info
+      display: block
+      position: relative
+      font-size: 16px
+      margin-bottom: 10px
+      margin-left: 20px
+      +light
+      &::before
+        content: ""
+        position: absolute
+        left: -20px
+        top: 50%
+        transform: translateY(-50%)
+    &-box
+      width: 100%
+      background-color: #ddd
+      margin-bottom: 10px
+      border-radius: 10px
+    &-progress
+      padding-top: 10px
+      padding-bottom: 10px
+      border-radius: 10px
+    .html
+      width: 58%
+      background-color: #E44D26
+    .css
+      width: 64%
+      background-color: #3C99DC
+    .js
+      width: 34%
+      background-color: #F0DB4F
+    .git
+      width: 52%
+      background-color: #666666
+    .ukr
+      width: 87%
+      background-color: #FFD500
+    .eng
+      width: 34%
+      background-color: #B2231F
+    .rus
+      width: 79%
+      background-color: #0033A0
+    &__html
+      &::before
+        background: url(../img/skills/html5.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__css
+      &::before
+        background: url(../img/skills/css.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__js
+      &::before
+        background: url(../img/skills/js.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__git
+      &::before
+        background: url(../img/skills/git.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__ps
+      &::before
+        background: url(../img/skills/ps.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__figma
+      &::before
+        background: url(../img/skills/figma.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__avocode
+      &::before
+        background: url(../img/skills/avocode.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__jq
+      &::before
+        background: url(../img/skills/jq.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__sass
+      &::before
+        background: url(../img/skills/sass.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__node
+      &::before
+        background: url(../img/skills/node.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__mongodb
+      &::before
+        background: url(../img/skills/mongodb.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__php
+      &::before
+        background: url(../img/skills/php.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__lang
+      margin-left: 0
+
+
+
+
+
+
+
+
+
