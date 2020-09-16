@@ -21,6 +21,8 @@
   max-width: 1170px
   margin: 0 auto
 
+//=========header-styles=========
+
 .header
   background: url(../img/background.jpg) no-repeat center top -80px
   background-size: cover
@@ -60,7 +62,7 @@
         margin-bottom: 30px
         a
           text-decoration: none
-          color: #1144AA
+          color: #3C99DC
           font-size: 18px
           +light
 
@@ -100,5 +102,178 @@
     background-size: 35px 35px
     width: 35px
     height: 35px
+
+//===========section==============
+
+.section
+  padding: 70px 0
+
+.title
+  font-size: 35px
+  margin-bottom: 40px
+  text-transform: uppercase
+  +medium
+
+.row 
+  display: flex
+  margin-bottom: 50px
+  .left-block
+    flex-basis: 50%
+    margin-right: 100px
+  .right-block
+    flex-basis: 40%
+  .about
+    &-text
+      font-size: 15px
+      line-height: 2
+      margin-bottom: 20px
+      +light
+  .education
+    &-block
+      margin-bottom: 30px
+      padding-bottom: 10px
+      border-bottom: 1px solid #666666
+    &__university
+      display: block
+      margin-bottom: 15px
+      font-size: 20px
+      +medium
+    &__years
+      display: block
+      margin-bottom: 15px
+      font-size: 18px
+      +medium
+    &__text
+      display: block
+      font-size: 14px
+      +light
+  .skills
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &-title
+      flex-basis: 100%
+    &-block
+      margin-bottom: 40px
+    &-main
+      flex-basis: 100%
+    &-subtitle
+      display: block
+      margin-bottom: 15px
+      font-size: 20px
+      +medium
+    .skill
+      display: block
+      position: relative
+      font-size: 16px
+      margin-bottom: 10px
+      margin-left: 20px
+      +light
+      &::before
+        content: ""
+        position: absolute
+        left: -20px
+        top: 50%
+        transform: translateY(-50%)
+    &-box
+      width: 100%
+      background-color: #ddd
+      margin-bottom: 10px
+      border-radius: 10px
+    &-progress
+      padding-top: 10px
+      padding-bottom: 10px
+      border-radius: 10px
+    .html
+      width: 58%
+      background-color: #E44D26
+    .css
+      width: 64%
+      background-color: #3C99DC
+    .js
+      width: 34%
+      background-color: #F0DB4F
+    .git
+      width: 52%
+      background-color: #666666
+    &__html
+      &::before
+        background: url(../img/skills/html5.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__css
+      &::before
+        background: url(../img/skills/css.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__js
+      &::before
+        background: url(../img/skills/js.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__git
+      &::before
+        background: url(../img/skills/git.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__ps
+      &::before
+        background: url(../img/skills/ps.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__figma
+      &::before
+        background: url(../img/skills/figma.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__avocode
+      &::before
+        background: url(../img/skills/avocode.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__jq
+      &::before
+        background: url(../img/skills/jq.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__sass
+      &::before
+        background: url(../img/skills/sass.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__node
+      &::before
+        background: url(../img/skills/node.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__mongodb
+      &::before
+        background: url(../img/skills/mongodb.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+    &__php
+      &::before
+        background: url(../img/skills/php.svg) no-repeat center
+        background-size: 15px 15px
+        width: 15px
+        height: 15px
+
+
+
+
+
+
+
 
 
