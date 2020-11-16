@@ -5,15 +5,9 @@ const menuLinks = document.querySelectorAll('.menu-item__link');
 const anchors = document.querySelectorAll('a[href*="#"]');
 const body = document.body;
 
-function toggleActive() {
-  if (body.classList.contains('hidden')) {
-    body.classList.remove('hidden');
-  } else {
-    body.classList.add('hidden');
-  }                                             
+function toggleActive() {                                          
   hamburger.classList.toggle('hamburger--active'); 
   navigation.classList.toggle('nav--active');
-  overlay.classList.toggle('overlay--on');
 }
 
 for (let anchor of anchors) {
@@ -34,7 +28,7 @@ menuLinks.forEach(link => {
     for (let i = 0; i < menuLinks.length; i++) {
       menuLinks[i].classList.remove('menu-item__link--active');
     }
-    e.target.classList.add('menu-item__link--active');
+    e.target.classList.add('menu-item__link--active');                                           
     toggleActive();
   });
 });
