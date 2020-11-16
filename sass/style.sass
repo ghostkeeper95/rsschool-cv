@@ -11,7 +11,9 @@
 @mixin bold
   font-family: 'Poppins', sans-serif
   font-weight: 700
-  
+
+//=========common-styles=========
+
 *
   box-sizing: border-box
   margin: 0
@@ -21,271 +23,544 @@
   max-width: 1170px
   margin: 0 auto
 
-//=========header-styles=========
-
-.header
-  background: url(../img/background.jpg) no-repeat center top -80px
-  background-size: cover
-  padding: 200px 0
-  .intro
-    display: flex
-    align-items: center
-    justify-content: space-between
-    &-text
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      &__name
-        font-size: 72px
-        color: #ffffff
-        +bold
-      &__position
-        font-size: 40px
-        color: #ffffff
-        +medium
-    &-img
-      img
-        max-width: 350px
-        border-radius: 50%
-        box-shadow: 0px 0px 165px -6px rgba(255,255,255,1)
-    &-contacts
-      display: flex
-      flex-wrap: wrap
-      align-items: center
-      justify-content: space-around
-      margin-top: 50px
-      margin-left: 50px
-      padding-left: 0
-      li
-        list-style-type: none
-        flex-basis: 50%
-        margin-bottom: 30px
-        a
-          text-decoration: none
-          color: #3C99DC
-          font-size: 18px
-          +light
-
-.intro-link
-  position: relative
-  &::before
-    content: ""
-    position: absolute
-    left: -50px
-    top: 50%
-    transform: translateY(-50%)
-
-.telegram
-  &::before
-    background: url(../img/telegram.svg) no-repeat center
-    background-size: 35px 35px
-    width: 35px
-    height: 35px
-
-.phone
-  &::before
-    background: url(../img/phone.svg) no-repeat center
-    background-size: 35px 35px
-    width: 35px
-    height: 35px
-
-.email
-  &::before
-    background: url(../img/gmail.svg) no-repeat center
-    background-size: 35px 35px
-    width: 35px
-    height: 35px
-
-.linkedin
-  &::before
-    background: url(../img/linkedin.svg) no-repeat center
-    background-size: 35px 35px
-    width: 35px
-    height: 35px
-
-//===========section==============
-
 .section
-  padding: 70px 0
+  padding: 60px 0
+  scroll-margin: 3.5rem
+  &-wrap
+    display: flex
+    align-items: start
 
 .title
   font-size: 35px
   margin-bottom: 40px
   text-transform: uppercase
+  z-index: 100
   +medium
 
-.row 
+.text-content
+  font-size: 18px
+  line-height: 2
+  z-index: 100
+  +light
+
+a
+  text-decoration: none
+
+ul
+  margin-left: 0
+  padding-left: 0
+
+li
+  list-style-type: none
+
+.hidden
+  overflow: hidden
+  height: 100vh
+
+.overlay
+  visibility: hidden
+  position: fixed
+  width: 100%
+  height: 100%
+  background: rgba(41, 41, 41, 0.6)
+  z-index: 4
+  opacity: 0
+  transition: all .3s ease-in-out
+  &--on
+    visibility: visible
+    opacity: 1
+    transition: all .3s ease-in-out
+
+//=========header-styles=========
+
+.header
+  position: sticky
+  width: 100%
+  top: 0
+  background-color: #0E1116
+  padding: 20px 0
+  z-index: 6
+  &::after
+    display: block
+    position: absolute
+    bottom: 0
+    content: ''
+    height: 1px
+    width: 100%
+    background-image: linear-gradient(to left, #051937, #5a3260, #ae4e6c, #ec8060, #ffc857)
+  &-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.logo
+  &__link
+    font-size: 21px
+    color: #ffffff
+    text-transform: uppercase
+    letter-spacing: 4.5px
+    +light
+.nav
+  width: 50%
+.menu
   display: flex
-  align-items: start
-  margin-bottom: 50px
-  .left-block
-    flex-basis: 50%
-    margin-right: 100px
-  .right-block
-    flex-basis: 50%
-  .about
-    &-text
-      font-size: 18px
-      line-height: 2
-      margin-bottom: 20px
+  align-items: center
+  justify-content: space-between
+  &-item
+    &__link
+      color: #ffffff
+      font-size: 16px
+      letter-spacing: 1.5px
+      transition: all 0.3s ease-in-out
       +light
-  .education
-    &-block
-      margin-bottom: 30px
-      padding-bottom: 10px
-      border-bottom: 1px solid #666666
-    &__university
-      display: block
-      margin-bottom: 15px
-      font-size: 20px
-      +medium
-    &__years
-      display: block
-      margin-bottom: 15px
-      font-size: 18px
-      +medium
-    &__text
-      display: block
-      font-size: 14px
-      +light
-  .skills
+      &::after
+        display: block
+        content: ''
+        background-color: #FFC857
+        height: 1px
+        width: 0
+        transition: width 0.3s ease-in-out
+      &:hover::after
+        width: 100%
+      &--active
+        &::after
+          display: block
+          content: ''
+          background-color: #FFC857
+          height: 1px
+          width: 100%
+          transition: width 0.3s ease-in-out
+
+.hamburger
+  display: none
+  position: relative
+  width: 30px
+  height: 22px
+  margin-right: 43px
+  transition: all 0.3s ease-in-out
+  z-index: 999
+  span,
+  span::before,
+  span::after
+    position: absolute
+    top: 50%
+    margin-top: -1px
+    width: 100%
+    height: 2px
+    background-color: #FFC857
+  span::before,
+  span::after
+    content: ''
+  span::before
+    transform: translateY(-10px)
+  span::after
+    transform: translateY(10px)
+
+.hamburger--active
+  transform: rotate(90deg)
+  transition: all 0.3s ease-in-out
+
+//==========hero-styles============
+
+.hero
+  background-image: linear-gradient(to bottom, #0e1116, #12191f, #122127, #13292d, #153131)
+  padding: 120px 0
+  width: 100%
+
+.intro
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  &__greeting
+    font-size: 56px
+    letter-spacing: 5px
+    color: #ffffff
+    +medium
+  &__name
+    color: #FFC857
+  &-img-block
+    background-color: #ffffff
+    background-image: url('../img/avatar.jpg')
+    background-repeat: no-repeat
+    background-size: 110%
+    background-position: -25px 0
+    padding: 10px
+    width: 35%
+    height: 450px
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%
+    box-shadow: 28px 28px 0px 0px rgba(50, 50, 50, 0.7)
+    transition: border-radius 0.3s ease-in-out, transform 0.3s ease-in-out
+    &:hover
+      border-radius: 35% 65% 65% 30%/30% 35% 65% 65%
+      transform: scale(1.01)
+      transition: border-radius 0.3s ease-in-out, transform 0.3s ease-in-out
+
+  &__img
+    width: 300px
+  &-social
+    display: flex
+    align-items: center
+    flex-basis: 100%
+    &__link
+      position: relative
+      margin-right: 35px
+      transition: all 0.3s ease-in-out
+      &:hover
+        transform: scale(1.2)
+        transition: all 0.3s ease-in-out
+
+.telegram
+  background: url(../img/telegram.svg) no-repeat center
+  background-size: 35px 35px
+  width: 35px
+  height: 35px
+
+.phone
+  background: url(../img/phone.svg) no-repeat center
+  background-size: 35px 35px
+  width: 35px
+  height: 35px
+
+.email
+  background: url(../img/gmail.svg) no-repeat center
+  background-size: 35px 35px
+  width: 35px
+  height: 35px
+
+.linkedin
+  background: url(../img/linkedin.svg) no-repeat center
+  background-size: 35px 35px
+  width: 35px
+  height: 35px
+
+//=========About section=========
+
+.about-me
+  &__text
+    margin-bottom: 20px
+
+//=========Education ============
+
+.education
+  background-color: #F4F4F6
+  &-box
+    flex-basis: 50%
+  &-block
+    margin-bottom: 30px
+    padding-bottom: 10px
+    border-bottom: 1px solid #666666
+  &__university
+    display: block
+    margin-bottom: 15px
+    font-size: 20px
+    +medium
+  &__years
+    display: block
+    margin-bottom: 15px
+    font-size: 18px
+    +medium
+  &__text
+    display: block
+    font-size: 14px
+    +light
+
+.left-block
+  margin-right: 35px
+.right-block
+  margin-left: 35px
+
+//===========Skills============
+
+.skills
+  &-group
+    flex-basis: 50%
+  &-block
+    margin-bottom: 20px
+  &-main
+    margin-bottom: 30px
+  &-additional
     display: flex
     justify-content: space-between
+  &-subtitle
+    display: block
+    margin-bottom: 15px
+    font-size: 20px
+    +medium
+  &-info
+    display: block
+    position: relative
+    font-size: 16px
+    margin-bottom: 10px
+    margin-left: 20px
+    +light
+    &::before
+      content: ""
+      position: absolute
+      left: -20px
+      top: 50%
+      transform: translateY(-50%)
+
+  &-box
+    width: 100%
+    background-color: #ddd
+    margin-bottom: 10px
+    border-radius: 10px
+  &-progress
+    padding-top: 10px
+    padding-bottom: 10px
+    border-radius: 10px
+  &__html
+    &::before
+      background: url(../img/skills/html5.svg) no-repeat center
+      background-size: 15px 15px
+      width: 15px
+      height: 15px
+  &__css
+    &::before
+      background: url(../img/skills/css.svg) no-repeat center
+      background-size: 15px 15px
+      width: 15px
+      height: 15px
+  &__js
+    &::before
+      background: url(../img/skills/js.svg) no-repeat center
+      background-size: 15px 15px
+      width: 15px
+      height: 15px
+  &__git
+    &::before
+      background: url(../img/skills/git.svg) no-repeat center
+      background-size: 15px 15px
+      width: 15px
+      height: 15px
+  &__ps
+    &::before
+      background: url(../img/skills/ps.svg) no-repeat center
+      background-size: 15px 15px
+      width: 15px
+      height: 15px
+  &__figma
+    &::before
+      background: url(../img/skills/figma.svg) no-repeat center
+      background-size: 15px 15px
+      width: 15px
+      height: 15px
+  &__avocode
+    &::before
+      background: url(../img/skills/avocode.svg) no-repeat center
+      background-size: 15px 15px
+      width: 15px
+      height: 15px
+  &__jq
+    &::before
+      background: url(../img/skills/jq.svg) no-repeat center
+      background-size: 15px 15px
+      width: 15px
+      height: 15px
+  &__sass
+    &::before
+      background: url(../img/skills/sass.svg) no-repeat center
+      background-size: 15px 15px
+      width: 15px
+      height: 15px
+  &__node
+    &::before
+      background: url(../img/skills/node.svg) no-repeat center
+      background-size: 15px 15px
+      width: 15px
+      height: 15px
+  &__mongodb
+    &::before
+      background: url(../img/skills/mongodb.svg) no-repeat center
+      background-size: 15px 15px
+      width: 15px
+      height: 15px
+  &__php
+    &::before
+      background: url(../img/skills/php.svg) no-repeat center
+      background-size: 15px 15px
+      width: 15px
+      height: 15px
+  &__lang
+    margin-left: 0
+.html
+  width: 68%
+  background-color: #E44D26
+.css
+  width: 72%
+  background-color: #3C99DC
+.js
+  width: 44%
+  background-color: #F0DB4F
+.git
+  width: 52%
+  background-color: #666666
+.ukr
+  width: 87%
+  background-color: #FFD500
+.eng
+  width: 34%
+  background-color: #B2231F
+.rus
+  width: 79%
+  background-color: #0033A0
+
+.works
+  background-color: #F4F4F6
+  &-group
+    display: flex
     flex-wrap: wrap
-    &-title
-      flex-basis: 100%
-    &-block
+    justify-content: space-between
+  &__img
+    display: block
+    max-width: 100%
+    min-height: 250px
+    object-fit: cover
+    transition: transform .3s ease-in-out
+    &:hover
+      transform: scale(1.1)
+      transform-origin: 50% 50%
+  &-card
+    width: 30%
+    margin-bottom: 40px
+    overflow: hidden
+    box-shadow: 0px 0px 20px 4px rgba(34, 60, 80, 0.35)
+  &__title
+    text-align: center
+    font-size: 20px
+    padding: 20px 0
+    color: #000000
+    +light
+
+.footer
+  padding: 80px 0
+  display: flex
+  align-items: center
+  justify-content: center
+  background-image: linear-gradient(to top, #0e1116, #12191f, #122127, #13292d, #153131)
+  &-social
+    display: flex
+    align-items: center
+    width: 280px
+    justify-content: space-around
+    &__link
+      transition: all 0.3s ease-in-out
+      &:hover
+        transform: scale(1.2)
+        transition: all 0.3s ease-in-out
+
+@media (max-width: 1199px)
+  .container
+    max-width: 960px
+  .intro
+    &-img-block
+      height: 400px
+      background-size: 120%
+
+@media (max-width: 991px)
+  .container
+    max-width: 750px
+  .hero
+    padding: 80px
+    &-social
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      flex-basis: 50%
+      order: 1
+  .nav
+    width: 70%
+  .intro
+    &__greeting
+      font-size: 38px
+      margin-bottom: 60px
+    &-img-block
+      height: 350px
+      width: 300px
+      background-size: 120%
+      order: 2
+    &-social
+      &__link
+        margin-bottom: 20px
+  .works
+    &-card
+      width: 45%
+
+@media (max-width: 768px)
+  .container
+    max-width: 100%
+    padding: 0 20px
+  .section
+    &-wrap
+      flex-direction: column
+      align-items: center
+  .title
+    font-size: 25px
+  .text-content
+    font-size: 16px
+
+  .nav
+    visibility: hidden
+    position: fixed
+    top: 0
+    right: -320px
+    width: 320px
+    height: 100vh
+    background-color: #262322
+    transition: all 0.3s ease-in-out
+    z-index: 99
+    &--active
+      visibility: visible
+      z-index: 3
+      transition: all 0.3s ease-in-out
+      right: 0
+  .menu
+    display: flex
+    flex-direction: column
+    margin-top: 80px
+    &-item
       margin-bottom: 20px
-    &-main
+
+  .hero
+    padding: 50px 20px
+    &-social
+      flex-basis: 10%
+  .intro
+    justify-content: space-evenly
+    &__greeting
       flex-basis: 100%
-    &-subtitle
-      display: block
-      margin-bottom: 15px
-      font-size: 20px
-      +medium
-    &-info
-      display: block
-      position: relative
-      font-size: 16px
-      margin-bottom: 10px
-      margin-left: 20px
-      +light
-      &::before
-        content: ""
-        position: absolute
-        left: -20px
-        top: 50%
-        transform: translateY(-50%)
+      font-size: 22px
+    &-img-block
+      height: 230px
+      width: 200px
+      box-shadow: 15px 15px 0px 0px rgba(50, 50, 50, 0.7)
+    &-social
+      &__link
+        width: 20px
+        height: 20px
+        background-size: 20px
+        margin-right: 0
+
+  .education
     &-box
-      width: 100%
-      background-color: #ddd
-      margin-bottom: 10px
-      border-radius: 10px
-    &-progress
-      padding-top: 10px
-      padding-bottom: 10px
-      border-radius: 10px
-    .html
-      width: 58%
-      background-color: #E44D26
-    .css
-      width: 64%
-      background-color: #3C99DC
-    .js
-      width: 34%
-      background-color: #F0DB4F
-    .git
-      width: 52%
-      background-color: #666666
-    .ukr
-      width: 87%
-      background-color: #FFD500
-    .eng
-      width: 34%
-      background-color: #B2231F
-    .rus
-      width: 79%
-      background-color: #0033A0
-    &__html
-      &::before
-        background: url(../img/skills/html5.svg) no-repeat center
-        background-size: 15px 15px
-        width: 15px
-        height: 15px
-    &__css
-      &::before
-        background: url(../img/skills/css.svg) no-repeat center
-        background-size: 15px 15px
-        width: 15px
-        height: 15px
-    &__js
-      &::before
-        background: url(../img/skills/js.svg) no-repeat center
-        background-size: 15px 15px
-        width: 15px
-        height: 15px
-    &__git
-      &::before
-        background: url(../img/skills/git.svg) no-repeat center
-        background-size: 15px 15px
-        width: 15px
-        height: 15px
-    &__ps
-      &::before
-        background: url(../img/skills/ps.svg) no-repeat center
-        background-size: 15px 15px
-        width: 15px
-        height: 15px
-    &__figma
-      &::before
-        background: url(../img/skills/figma.svg) no-repeat center
-        background-size: 15px 15px
-        width: 15px
-        height: 15px
-    &__avocode
-      &::before
-        background: url(../img/skills/avocode.svg) no-repeat center
-        background-size: 15px 15px
-        width: 15px
-        height: 15px
-    &__jq
-      &::before
-        background: url(../img/skills/jq.svg) no-repeat center
-        background-size: 15px 15px
-        width: 15px
-        height: 15px
-    &__sass
-      &::before
-        background: url(../img/skills/sass.svg) no-repeat center
-        background-size: 15px 15px
-        width: 15px
-        height: 15px
-    &__node
-      &::before
-        background: url(../img/skills/node.svg) no-repeat center
-        background-size: 15px 15px
-        width: 15px
-        height: 15px
-    &__mongodb
-      &::before
-        background: url(../img/skills/mongodb.svg) no-repeat center
-        background-size: 15px 15px
-        width: 15px
-        height: 15px
-    &__php
-      &::before
-        background: url(../img/skills/php.svg) no-repeat center
-        background-size: 15px 15px
-        width: 15px
-        height: 15px
-    &__lang
-      margin-left: 0
+      width: 90%
+      &:first-child
+        margin-bottom: 40px
+  .left-block,
+  .right-block
+    margin: 0
 
+  .skills
+    &-group
+      width: 90%
 
+  .works
+    &-group
+      justify-content: center
+    &-card
+      width: 90%
 
-
-
-
-
-
-
+  .hamburger
+    margin-left: auto
+    display: block
