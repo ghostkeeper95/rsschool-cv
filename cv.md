@@ -49,7 +49,7 @@ function partitionOn(pred, items) {
 ```
 
 **6. Work experience:**
-* 2020 - Currently - Junior Front-End Developer, Devico
+* 2021, April - Currently - Junior Front-End Developer, Devico
 
 **7. Education:**
 * 2012 – 2018. The V. N. Karazin Kharkiv National University – Master Degree, Earth sciences, Economic and social geography.
