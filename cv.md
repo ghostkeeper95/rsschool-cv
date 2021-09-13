@@ -33,10 +33,11 @@ From soft skills, I can single out the ability to learn quickly, self-organizati
   + npm
   + yarn
 * Jira, Asana
-* Knowledge pf Linux, Windows and multiple browsers
+* Knowledge of Linux, Windows and multiple browsers
 
 **5. Code examples:**
-```function partitionOn(pred, items) {
+```javascript 
+function partitionOn(pred, items) {
   let even = items.filter(pred);
   let odd = items.filter(el => even.indexOf(el) < 0);
 
@@ -44,7 +45,8 @@ From soft skills, I can single out the ability to learn quickly, self-organizati
   items.push(...odd, ...even);
 
   return odd.length;
-}```
+}
+```
 
 **6. Education:**
 * 2012 – 2018. The V. N. Karazin Kharkiv National University – Master Degree, Earth sciences, Economic and social geography.
