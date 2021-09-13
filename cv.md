@@ -38,8 +38,8 @@ From soft skills, I can single out the ability to learn quickly, self-organizati
 **5. Code examples:**
 ```javascript 
 function partitionOn(pred, items) {
-  let even = items.filter(pred);
-  let odd = items.filter(el => even.indexOf(el) < 0);
+  const even = items.filter(pred);
+  const odd = items.filter(el => even.indexOf(el) < 0);
 
   items.splice(0);
   items.push(...odd, ...even);
@@ -48,18 +48,16 @@ function partitionOn(pred, items) {
 }
 ```
 
-**6. Education:**
+**6. Work experience:**
+* 2020 - Currently - Junior Front-End Developer, Devico
+
+**7. Education:**
 * 2012 – 2018. The V. N. Karazin Kharkiv National University – Master Degree, Earth sciences, Economic and social geography.
 
 **7. Additional Education:**
-* Currently - JS/FE 2020 Q3 - RS School;
-* 2018 - Front-End Pro – Hillel IT School;
-* 2018 - Web-developer 11.0 – Glo-Academy.
+* JS/FE 2020 Q3 - RS School
+* 2018 - Front-End Pro – Hillel IT School
+* 2018 - Web-developer 11.0 – Glo-Academy
 
 **8. Languages:**
-* English - Pre-Intermediate
-
-**9. My work example**
-* Landing - https://bezrukviktor.github.io/skinali/
-* Landing - https://bezrukviktor.github.io/Luxestate/
-* My own project – t.me/movie_tape_bot
+* English - Intermediate
