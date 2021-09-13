@@ -3,29 +3,48 @@
 **2. Contacts:**
 * Phone: +380994715609
 * e-mail: without.hands95@gmail.com
-* LinkedIn: www.linkedin.com/in/bezruk-viktor
-* Telegram: t.me/bezruk_viktor
+* LinkedIn: [bezruk-viktor](www.linkedin.com/in/bezruk-viktor)
+* Telegram: [bezruk-viktor](t.me/bezruk_viktor)
 
 **3. About me:**
 
-Hello, I'm Viktor. I'm beginning Front-End Developer from Kharkiv, Ukraine.
+Hello, I'm Viktor. I'm Front-End Developer from Kharkiv, Ukraine.
 
 I'm interested in web development and everything connected with it.
-Currently, my main purpose is acquiring the necessary skills and knowledge to get a job for the Junior Front-End Developer position.
+I like to improve my skills and gain new knowledge. Of my strengths I can single out hard work, 
+the ability to independently solve problems, teamwork.
 
 From soft skills, I can single out the ability to learn quickly, self-organization, self-learning, the desire to learn new things
 
 **4. Skills:**
-* HTML, CSS (SASS, LESS);
-* Adaptive web design;
-* JS, jQuery;
-* Git;
-* Photoshop, Figma, Zeplin, Avocode;
-* Node.js, MongoDB (experience).
+* HTML, CSS, Modern CSS
+  + SASS
+  + LESS
+  + Styled Components
+  + Material UI
+* JS, TS (JSX, Fundamentals + ES6)
+* React JS, Redux
+* Node JS, Koa, MongoDB, GraphQL
+* Git, GitHub
+* Testing
+  + Unit testing 
+  + E2E testing
+* Package Managers
+  + npm
+  + yarn
+* Jira, Asana
+* Knowledge pf Linux, Windows and multiple browsers
 
 **5. Code examples:**
-* Landing Page "Skinali" - https://github.com/bezrukviktor/skinali
-* Landing Page "Luxestate" - https://github.com/bezrukviktor/Luxestate
+```function partitionOn(pred, items) {
+  let even = items.filter(pred);
+  let odd = items.filter(el => even.indexOf(el) < 0);
+
+  items.splice(0);
+  items.push(...odd, ...even);
+
+  return odd.length;
+}```
 
 **6. Education:**
 * 2012 – 2018. The V. N. Karazin Kharkiv National University – Master Degree, Earth sciences, Economic and social geography.
